@@ -1,7 +1,8 @@
-$LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
+# frozen_string_literal: true
+$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 
-#autoload :Star, File.expand_path('spec/support/models.rb')
-#autoload :SolarSystem, File.expand_path('spec/support/models.rb')
+# autoload :Star, File.expand_path('spec/support/models.rb')
+# autoload :SolarSystem, File.expand_path('spec/support/models.rb')
 
 require 'byebug'
 require 'active_record'

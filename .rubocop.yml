@@ -1,0 +1,7 @@
+Metrics/LineLength:
+  Max: 150
+  Severity: refactor
+Metrics/BlockLength:
+  Max: 50
+Style/Documentation:
+  Enabled: false

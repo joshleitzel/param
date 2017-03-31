@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'active_record'
 
 ActiveRecord::Base.class_eval do
@@ -6,18 +7,14 @@ ActiveRecord::Base.class_eval do
       @param = attribute
       @param_to_s = options[:to_s]
 
-      if options[:to_s] == true
-        alias_method :to_s, :to_param
-      end
+      alias_method :to_s, :to_param if options[:to_s] == true
     end
 
     def param_name
       @param
     end
 
-    def param_to_s
-      @param_to_s
-    end
+    attr_reader :param_to_s
 
     def from_param(value)
       if param_name.nil?
